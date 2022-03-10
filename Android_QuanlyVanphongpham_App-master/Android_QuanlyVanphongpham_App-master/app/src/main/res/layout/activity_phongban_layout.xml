@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".Main.PhongbanLayout"
+    >
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_marginHorizontal="10dp"
+    android:id="@+id/Toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <Button
+        android:id="@+id/PB_exitBtn"
+        style="@style/Btn"
+        android:text="@string/thoat"
+        android:textColor="#ffffff"
+        android:backgroundTint="@color/thoatbtn_bgcolor"
+
+        />
+
+    <EditText
+        android:id="@+id/PB_searchEdit"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner"
+        android:drawableLeft="@drawable/outline_search_black_24"
+        android:padding="5dp"
+        android:textSize="15dp"
+        android:layout_marginVertical="4dp"
+        android:layout_marginHorizontal="10dp"
+        android:hint="@string/search"
+        android:layout_gravity="center"
+        >
+
+    </EditText>
+
+    <Button
+        android:id="@+id/PB_insertBtn"
+        style="@style/Btn"
+        android:layout_width="50dp"
+        app:icon="@drawable/outline_add_black_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="#000"
+        app:cornerRadius="100dp"
+        android:backgroundTint="@color/disable_color"
+        />
+</LinearLayout>
+<!-- + @+id/Toolbar + -->
+<!--///////////////////////////////////////////////////////-->
+<!-- + Table Container + -->
+    <!--///////////////////////////////////////////////////////-->
+<!-- + @+id/subToolbar + -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:context=".Main.PhongbanLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/heading"
+                style="@style/Heading"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:text="@string/phong_ban"
+                />
+
+        </LinearLayout>
+        <!--    Header of the table -->
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="1"
+            >
+
+            <TableRow>
+
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ma_pb"
+                    android:layout_width="80dp"/>
+
+                <TextView
+                    style="@style/tableHeader"
+                    android:layout_width="300dp"
+                    android:text="@string/ten_pb" />
+            </TableRow>
+
+
+            <!--    Content of the table -->
+        </TableLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/PB_table_list"
+                style="@style/tableLayoutStyle"
+                android:stretchColumns="1">
+                <!--         Generate Row based on Data here   -->
+                <!-- This Row called Example Row,
+                        other Rows will follow this Row Format-->
+                <TableRow android:visibility="invisible">
+                    <TextView
+                        style="@style/PBRow_firstCellWidth"
+                        android:layout_height="0dp"
+                        android:layout_width="80dp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        style="@style/tableRow"
+                        android:layout_height="0dp"
+                        android:layout_width="300dp"
+                        android:visibility="invisible" />
+                </TableRow>
+<!--                <TableRow>-->
+<!--                    <TextView-->
+<!--                        style="@style/tableRow"-->
+<!--                        android:background="@drawable/table_lightdark_border"-->
+<!--                        android:maxWidth="80dp"-->
+<!--                        android:text="PB02dasdsad" />-->
+
+<!--                    <TextView-->
+<!--                        style="@style/tableRow"-->
+<!--                        android:maxWidth="300dp"-->
+<!--                        android:background="@drawable/table_lightdark_border"-->
+<!--                        android:text="Phòng Kinh doanh dsadsadsad asdasdsaddasdsaddasda" />-->
+<!--                </TableRow>-->
+                <!--            <TableRow>-->
+                <!--                <TextView-->
+                <!--                    style="@style/PBRow_firstCellWidth"-->
+                <!--                    android:text="PB03"-->
+                <!--                    />-->
+                <!--                <TextView-->
+                <!--                    style="@style/tableRow"-->
+                <!--                    android:text="Phòng Kỹ thuật"-->
+                <!--                    />-->
+                <!--            </TableRow>-->
+                <!--            <TableRow>-->
+                <!--                <TextView-->
+                <!--                    style="@style/PBRow_firstCellWidth"-->
+                <!--                    android:text="PB04"-->
+                <!--                    android:background="@drawable/table_lightdark_border"-->
+                <!--                    />-->
+                <!--                <TextView-->
+                <!--                    style="@style/tableRow"-->
+                <!--                    android:text="Phòng Kế toán"-->
+                <!--                    android:background="@drawable/table_lightdark_border"-->
+                <!--                    />-->
+                <!--            </TableRow>-->
+
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_marginHorizontal="10dp"
+    android:layout_below="@+id/table_container"
+    android:id="@+id/subToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/PB_delBtn"
+        style="@style/Btn"
+        android:text="@string/xoa"
+        android:backgroundTint="#DD4545"
+        app:icon="@drawable/outline_delete_24"
+        app:iconGravity="textStart"
+        app:iconPadding="5dp"
+        app:iconTint="#000"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:layout_marginLeft="10dp"
+        android:id="@+id/PB_editBtn"
+        style="@style/Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sua"
+        android:textColor="#000"
+        android:backgroundTint="#3C7AD8"
+        app:icon="@drawable/outline_settings_24"
+        app:iconGravity="textStart"
+        app:iconPadding="5dp"
+        app:iconTint="#000"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="right">
+        <Button
+            style="@style/Btn"
+            android:id="@+id/PB_navbar_capphat"
+            android:text="@string/cap_phat_VPP"
+            android:backgroundTint="@color/disable_color"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+
+    android:id="@+id/navbar"
+    android:layout_below="@+id/subtoolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <Button
+        style="@style/Btn"
+        android:id="@+id/PB_navbar_phongban"
+        android:backgroundTint="@color/active_color"
+        android:textColor="@color/black"
+        android:text="@string/phong_ban"/>
+
+    <Button
+        style="@style/Btn"
+        android:id="@+id/PB_navbar_nhanvien"
+        android:backgroundTint="@color/disable_color"
+        android:textColor="@color/black"
+        android:text="@string/nhan_vien"/>
+
+    <Button
+        style="@style/Btn"
+        android:id="@+id/PB_navbar_VPP"
+        android:backgroundTint="@color/disable_color"
+        android:textColor="@color/black"
+        android:text="@string/vpp"/>
+
+</LinearLayout>
+<include
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    layout="@layout/_created_by_3xdteam"/>
+</LinearLayout>

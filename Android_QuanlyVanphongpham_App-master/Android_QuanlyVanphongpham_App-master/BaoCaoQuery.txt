@@ -1,0 +1,55 @@
+a. Tạo query tìm 02 nhân viên được cấp nhiều "Giấy A4" hoặc 1 vpp nào đó nhất.
+
+SELECT NV.MANV, NV.HOTEN, PB.TENPB, VPP.TENVPP, SUM(CP.SOLUONG) AS TONGSL
+FROM CAPPHAT CP, NHANVIEN NV, VANPHONGPHAM VPP, PHONGBAN PB
+WHERE VPP.TENVPP = 'GIAY A4'
+AND CP.IDNV = NV.ID
+AND CP.IDVPP = VPP.ID
+AND NV.IDPB = PB.ID
+GROUP BY NV.MANV
+ORDER BY TONGSL DESC
+LIMIT 2
+
+b. Tạo query liệt kê các VPP được cấp phát cùng ngày.
+
+SELECT DISTINCT VPP.MAVPP, VPP.TENVPP, CP.NGAYCAP 
+FROM CAPPHAT CP, VANPHONGPHAM VPP
+WHERE CP.IDVPP = VPP.ID
+
+c. Tạo query cho biết các nhân viên chưa được cấp phát văn phòng phẩm trong năm 2018, hoặc năm nào đó.
+
+SELECT * FROM NHANVIEN
+WHERE MANV NOT IN
+(
+-- strftime('%s',NGAYCAP)
+SELECT NV.MANV AS MILISEC 
+FROM CAPPHAT CP, NHANVIEN NV, PHONGBAN PB
+WHERE CP.IDNV = NV.ID
+AND NV.IDPB = PB.ID
+AND 
+(
+strftime('%s',CP.NGAYCAP) >= strftime('%s','2018-01-01')
+AND strftime('%s',CP.NGAYCAP) <= strftime('%s','2018-12-31')
+)
+)
+
+d. Tạo query thống kê số lượng các văn phòng phẩm cấp cho từng phòng ban.
+
+SELECT CP.SOPHIEU, CP.NGAYCAP, NV.MANV, NV.HOTEN, PB.MAPB ,PB.TENPB, VPP.MAVPP, VPP.TENVPP
+, SUM(SOLUONG) AS TONGSL
+FROM CAPPHAT CP, NHANVIEN NV, PHONGBAN PB, VANPHONGPHAM VPP
+WHERE CP.IDVPP = VPP.ID
+AND CP.IDNV = NV.ID
+AND NV.IDPB = PB.ID
+AND PB.MAPB = 'PB01'   -- chỗ này sẽ được xử lý 1 phần trong java cho dễ
+GROUP BY MAVPP
+
+e. Tạo query cho để thống kê nhân viên nào được cấp phát cái gì, trị giá bao nhiêu
+
+SELECT PB.TENPB, NV.MANV, NV.HOTEN, NV.NGAYSINH, CP.SOPHIEU, CP.NGAYCAP, VPP.TENVPP, VPP.GIANHAP, SUM(VPP.GIANHAP) AS TONGTRIGIA
+FROM NHANVIEN NV, PHONGBAN PB, VANPHONGPHAM VPP, CAPPHAT CP
+WHERE NV.IDPB = PB.ID
+AND CP.IDVPP = VPP.ID
+AND CP.IDNV = NV.ID
+AND NV.MANV = 'NV01' -- chỗ này sẽ duyệt vòng lặp để lấy ra manv trong pb
+GROUP BY CP.NGAYCAP, VPP.TENVPP

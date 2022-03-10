@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main.NhanvienLayout"
+    >
+
+    <!--    Header of the table -->
+        <!-- 70 p0 / 160 / 60 / 60 / <= 46 -->
+    <TableLayout
+        style="@style/tableLayoutStyle"
+        android:stretchColumns="4"
+        >
+        <TableRow>
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/ma_nv"
+                android:layout_width="70dp"
+                android:padding="0dp"
+                />
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/ten_nv"
+                android:layout_width="160dp"
+                />
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/pb"
+                android:layout_width="60dp"
+                />
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/vpp"
+                android:layout_width="60dp"
+                />
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/sl"
+                android:maxWidth="46dp"
+                />
+        </TableRow>
+        <!--    Content of the table -->
+    </TableLayout>
+    <!-- 70 p0 / 160 / 60 / 60 / <= 46 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="4">
+            <!--         Generate Row based on Data here   -->
+            <TableRow>
+                <TextView
+                    style="@style/PBRow_firstCellWidth"
+                    android:text="NV4"
+                    android:layout_width="70dp"
+                    android:padding="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="Ngô Đức Trung"
+                    android:layout_width="160dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="PB02"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="Giấy A4"
+                    android:padding="0dp"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="32"
+                    android:maxWidth="46dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

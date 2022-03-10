@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/active_color"
+        />
+    <ImageView
+        android:id="@+id/VPP_IP_Hinh"
+        android:layout_marginVertical="20dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/_xdlogo"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/only_border"
+        >
+        <TextView
+            android:id="@+id/textView"
+            style="@style/textBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/ma_vpp" />
+        <TextView
+            android:id="@+id/VPP_IP_maVPP"
+            style="@style/textBlack"
+            android:textColor="@color/custom_dropdown_item_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="@string/ma_vpp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/only_border">
+        <TextView
+            style="@style/textBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/ten_vpp" />
+        <TextView
+            android:id="@+id/VPP_IP_tenVPP"
+            style="@style/textBlack"
+            android:textColor="@color/custom_dropdown_item_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="@string/ten_vpp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/only_border">
+        <TextView
+            style="@style/textBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/dvt" />
+        <TextView
+            android:id="@+id/VPP_IP_DVT"
+            style="@style/textBlack"
+            android:textColor="@color/custom_dropdown_item_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="@string/dvt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/only_border"
+        android:layout_marginBottom="50dp">
+        <TextView
+            style="@style/textBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/gia_nhap" />
+        <TextView
+            android:id="@+id/VPP_IP_Gia"
+            style="@style/textBlack"
+            android:textColor="@color/custom_dropdown_item_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="@string/gia_nhap" />
+    </LinearLayout>
+
+</LinearLayout>

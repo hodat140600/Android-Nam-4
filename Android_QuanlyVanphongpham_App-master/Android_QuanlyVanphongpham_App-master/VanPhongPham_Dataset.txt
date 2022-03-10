@@ -1,0 +1,7 @@
+6 
+VPP1 Giấy A4 Gram 70000
+VPP2 Kéo     Cái  12000
+VPP3 Bút     Cây  5000
+VPP4 Kim bấm Hộp  2000
+VPP5 Đầu bấm Cái 18000
+VPP6 Keo dán Chai  7000

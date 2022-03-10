@@ -1,0 +1,9 @@
+8
+NV1 Nguyễn Thành Nam 01/08/1982 PB01
+NV2 Vũ Thị Thắm      12/08/1992 PB01
+NV3 Hồ Thanh Tâm     01/08/1990 PB02
+NV4 Ngô Đức Trung    04/08/1990 PB02
+NV5 Vũ Văn Nam       01/08/1982 PB02
+NV6 Trần Văn Thắng   01/08/1982 PB03
+NV7 Hà Quang Dự      01/08/1982 PB03
+NV8 Ngô Phương Lan   01/02/1990 PB04

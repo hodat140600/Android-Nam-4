@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Btn : Cho các loại nút trong bài   -->
+    <style name="Btn" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+    <style name="Heading">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">35dp</item>
+    </style>
+
+    <!--  Table -->
+    <style name="tableLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="tableHeader" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="tableRow" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/only_border</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="tempCombobox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/combo_box_spinner</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+        <style name="only_70dp" >
+            <item name="android:layout_width">70dp</item>
+        </style>
+    <!--PB : Phòng ban-->
+        <style name="PBHeader_firstCellWidth" parent="tableHeader">
+            <item name="android:layout_width">70dp</item>
+        </style>
+        <style name="PBRow_firstCellWidth" parent="tableRow">
+            <item name="android:layout_width">70dp</item>
+        </style>
+
+    <!--VPP : Văn phòng phẩm -->
+        <style name="VPPRow_firstCellWidth" parent="tableRow">
+            <item name="android:layout_width">85dp</item>
+        </style>
+        <style name="VPPRow_secCellWidth" parent="tableRow">
+            <item name="android:layout_width">182dp</item>
+        </style>
+        <style name="VPPHeader_secCellWidth" parent="tableHeader">
+            <item name="android:layout_width">182dp</item>
+        </style>
+
+    <!--Text : Cho các loại chữ và chỉ cần chỉnh maxWidth lại cho các trường hợp -->
+    <style name="textRed" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:maxWidth">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/thoatbtn_bgcolor</item>
+    </style>
+    <style name="textBlack" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+
+</resources>

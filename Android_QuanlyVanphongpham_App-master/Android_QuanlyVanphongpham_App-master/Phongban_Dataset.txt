@@ -1,0 +1,5 @@
+4
+PB01 Phòng Giám đốc
+PB02 Phòng Kinh doanh
+PB03 Phòng Kỹ thuật
+PB04 Phòng kế toán

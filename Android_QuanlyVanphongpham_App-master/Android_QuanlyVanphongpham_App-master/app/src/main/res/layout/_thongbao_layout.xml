@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:context=".Main.ThongbaoLayout"
+    android:background="@drawable/only_border"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/textRed"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thoát chương trình"
+        android:gravity="center"
+        />
+    <TextView
+        style="@style/textBlack"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Bạn có thật sự muốn thoát?"
+        android:background="@drawable/only_border"
+        android:backgroundTint="@color/lightdark"
+        android:textSize="16dp"
+        android:gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            style="@style/Btn"
+            android:backgroundTint="@color/thoatbtn_bgcolor"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Không"
+            android:layout_marginRight="30dp"
+            />
+        <Button
+            style="@style/Btn"
+            android:backgroundTint="@color/yes_color"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Có"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Main.NhanvienLayout"
+    >
+    <!--    Header of the table -->
+    <!-- 40 / 100 / 100 / 80 / 80 -->
+    <TableLayout
+        style="@style/tableLayoutStyle"
+        android:stretchColumns="4"
+        >
+        <TableRow>
+            <TextView
+                style="@style/tableHeader"
+                android:text="Stt"
+                android:textSize="@dimen/smallTextSize"
+                android:layout_width="40dp"
+                android:padding="0dp"
+                />
+            <TextView
+                style="@style/tableHeader"
+                android:text="Số phiếu"
+                android:textSize="@dimen/smallTextSize"
+                android:layout_width="100dp" />
+
+            <TextView
+                style="@style/tableHeader"
+                android:text="Ngày cấp"
+                android:textSize="@dimen/smallTextSize"
+                android:layout_width="100dp"/>
+            <TextView
+                style="@style/tableHeader"
+                android:text="Tên VPP"
+                android:textSize="@dimen/smallTextSize"
+                android:layout_width="80dp"/>
+            <TextView
+                style="@style/tableHeader"
+                android:text="Trị giá"
+                android:textSize="@dimen/smallTextSize"
+                android:maxWidth="80dp"/>
+        </TableRow>
+
+    </TableLayout>
+    <!--    Content of the table -->
+    <!-- 40 p0 / 100 / 100 p0/ 80 / 80 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="4"
+            >
+            <TableRow
+                >
+                <TextView
+                    style="@style/tableRow"
+                    android:text="1"
+                    android:textSize="@dimen/smallTextSize"
+                    android:layout_width="40dp"
+                    android:padding="0dp"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="P006"
+                    android:textSize="@dimen/smallTextSize"
+                    android:layout_width="100dp"
+                    />
+
+                <TextView
+                    style="@style/tableRow"
+                    android:text="04/08/2018"
+                    android:textSize="@dimen/smallTextSize"
+                    android:layout_width="100dp"
+                    android:padding="0dp"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="Kim bấm"
+                    android:textSize="@dimen/smallTextSize"
+                    android:layout_width="80dp"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="140.000"
+                    android:textSize="@dimen/smallTextSize"
+                    android:maxWidth="80dp"
+                    />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main.NhanvienLayout"
+    >
+
+    <!--    Header of the table -->
+    <!-- 130 / 160 / <= 122  -->
+    <TableLayout
+        style="@style/tableLayoutStyle"
+        android:stretchColumns="2"
+        >
+        <TableRow>
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/ma_vpp"
+                android:layout_width="130dp"
+                />
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/ten_vpp"
+                android:layout_width="160dp"
+                />
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/ngay_cap"
+                android:maxWidth="122dp"
+                />
+
+        </TableRow>
+    </TableLayout>
+        <!-- Content of the table -->
+        <!-- 130 / 160 / <= 122  -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="2">
+            <!--         Generate Row based on Data here   -->
+            <TableRow>
+                <TextView
+                    style="@style/PBRow_firstCellWidth"
+                    android:text="VPP4"
+                    android:layout_width="130dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="Kim bấm"
+                    android:layout_width="160dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="04/08/2018"
+                    android:maxWidth="122dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

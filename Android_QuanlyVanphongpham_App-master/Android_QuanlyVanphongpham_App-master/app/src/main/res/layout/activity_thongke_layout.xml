@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Statistics.CapphatVPPLayout"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/CPV_Top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/TK_backBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:backgroundTint="@color/transparent"
+            app:icon="@drawable/baseline_arrow_back_ios_black_18"
+            app:iconGravity="textStart"
+            app:iconPadding="5dp"
+            app:iconTint="#000"
+            />
+
+    </LinearLayout>
+    <TextView
+        style="@style/Heading"
+        android:text="@string/thong_ke"
+        />
+
+    <Button
+        style="@style/Btn"
+        android:layout_width="match_parent"
+        android:paddingVertical="15dp"
+        android:id="@+id/TK_btn_cau1"
+        android:text="1. Tìm 02 nhân viên được cấp nhiều giấy A4 nhất"
+        android:backgroundTint="@color/thongke_activeBtn"
+        android:tag="0"
+        />
+    <Button
+        style="@style/Btn"
+        android:id="@+id/TK_btn_cau2"
+        android:layout_width="match_parent"
+        android:paddingVertical="15dp"
+        android:text="2. Liệt kê các VPP được cấp phát cùng ngày"
+        android:backgroundTint="@color/disable_color"
+        android:textColor="@color/black"
+        android:tag="1"
+        />
+    <Button
+        style="@style/Btn"
+        android:id="@+id/TK_btn_cau3"
+        android:layout_width="match_parent"
+        android:paddingVertical="15dp"
+        android:text="3. Các nhân viên chưa được cấp VPP năm 2018"
+        android:backgroundTint="@color/disable_color"
+        android:textColor="@color/black"
+        android:tag="2"
+        />
+    <Button
+        style="@style/Btn"
+        android:id="@+id/TK_btn_cau4"
+        android:layout_width="match_parent"
+        android:paddingVertical="15dp"
+        android:text="4. Thống kê số lượng các VPP cấp cho phòng ban"
+        android:backgroundTint="@color/disable_color"
+        android:textColor="@color/black"
+        android:tag="3"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+    <TextView
+        style="@style/textRed"
+        android:text="Kết quả thống kê"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginVertical="20dp"
+        />
+        <Button
+            android:id="@+id/TK_chartBtn"
+            style="@style/Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biểu đồ"
+            android:textColor="#000"
+            android:layout_marginLeft="120dp"
+            android:backgroundTint="#ED5316"
+            app:icon="@drawable/outline_equalizer_24"
+            app:iconGravity="textStart"
+            app:iconPadding="5dp"
+            app:iconTint="#000"
+            />
+
+    </LinearLayout>
+    // CAU 1 ------------------------------------------------ TABLE ---------
+    <LinearLayout
+        android:id="@+id/TK_wrapper_tableCau1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        >
+
+        <!--    Header of the table -->
+        <!-- 70 p0 / 160 / 60 / 60 / <= 46 -->
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="4"
+            >
+            <TableRow>
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ma_nv"
+                    android:layout_width="70dp"
+                    android:padding="0dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ten_nv"
+                    android:layout_width="160dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/pb"
+                    android:layout_width="60dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/vpp"
+                    android:layout_width="60dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/sl"
+                    android:maxWidth="46dp"
+                    />
+            </TableRow>
+            <!--    Content of the table -->
+        </TableLayout>
+        <!-- 70 p0 / 160 / 60 / 60 / <= 46 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:id="@+id/TK_tableCau1"
+                style="@style/tableLayoutStyle"
+                android:stretchColumns="4">
+                <!--         Generate Row based on Data here   -->
+                <TableRow>
+                    <TextView
+                        style="@style/PBRow_firstCellWidth"
+                        android:text="NV4"
+                        android:layout_width="70dp"
+                        android:padding="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="Ngô Đức Trung"
+                        android:layout_width="160dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="PB02"
+                        android:layout_width="60dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="Giấy A4"
+                        android:padding="0dp"
+                        android:layout_width="60dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="32"
+                        android:maxWidth="46dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    // CAU 2 ------------------------------------------------ TABLE ---------
+    <LinearLayout
+        android:id="@+id/TK_wrapper_tableCau2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        >
+
+        <!--    Header of the table -->
+        <!-- 130 / 160 / <= 122  -->
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="2"
+            >
+            <TableRow>
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ma_vpp"
+                    android:layout_width="130dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ten_vpp"
+                    android:layout_width="160dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ngay_cap"
+                    android:maxWidth="122dp"
+                    />
+
+            </TableRow>
+        </TableLayout>
+        <!-- Content of the table -->
+        <!-- 130 / 160 / <= 122  -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:id="@+id/TK_tableCau2"
+                style="@style/tableLayoutStyle"
+                android:stretchColumns="2">
+                <!--         Generate Row based on Data here   -->
+                <TableRow>
+                    <TextView
+                        style="@style/PBRow_firstCellWidth"
+                        android:text="VPP4"
+                        android:layout_width="130dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="Kim bấm"
+                        android:layout_width="160dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="04/08/2018"
+                        android:maxWidth="122dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    // CAU 3 ------------------------------------------------ TABLE ---------
+    <LinearLayout
+        android:id="@+id/TK_wrapper_tableCau3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:orientation="vertical"
+        tools:context=".Main.NhanvienLayout"
+        >
+
+        <!--    Header of the table -->
+        <!-- 70 p0 / 150 / 90 p0 / <= 80 p0 -->
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="3"
+            android:shrinkColumns="0"
+            >
+            <TableRow>
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ma_nv"
+                    android:padding="0dp"
+                    android:layout_width="70dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ten_nv"
+                    android:layout_width="150dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ngay_sinh"
+                    android:layout_width="90dp"
+                    android:padding="0dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ten_pb"
+                    android:maxWidth="80dp"
+                    android:padding="0dp"
+                    />
+            </TableRow>
+        </TableLayout>
+        <!--    Content of the table -->
+        <!-- 70 p0 / 150 p0 / 90 p0 / <= 80 p0 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:id="@+id/TK_tableCau3"
+                style="@style/tableLayoutStyle"
+                android:stretchColumns="3">
+                <!--         Generate Row based on Data here   -->
+                <TableRow>
+                    <TextView
+                        style="@style/PBRow_firstCellWidth"
+                        android:text="NV2"
+                        android:padding="0dp"
+                        android:layout_width="70dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="Nguyễn Thành Nam"
+                        android:layout_width="150dp"
+                        android:padding="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="18/01/1982"
+                        android:padding="0dp"
+                        android:layout_width="90dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="Phòng Giám đốc"
+                        android:maxWidth="80dp"
+                        android:padding="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    // CAU 4 ------------------------------------------------ TABLE ---------
+    <LinearLayout
+        android:id="@+id/TK_wrapper_tableCau4"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        >
+
+        <!--    Header of the table -->
+        <!-- 90 / 160 / 80 -->
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="2"
+            >
+            <TableRow>
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ma_pb"
+                    android:layout_width="90dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ten_pb"
+                    android:layout_width="160dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/so_luong_vpp"
+                    android:layout_width="80dp"
+                    />
+            </TableRow>
+
+        </TableLayout>
+        <!--    Content of the table -->
+        <!-- 90 / 160 / 80 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:id="@+id/TK_tableCau4"
+                style="@style/tableLayoutStyle"
+                android:stretchColumns="2">
+                <!--         Generate Row based on Data here   -->
+                <TableRow>
+                    <TextView
+                        style="@style/PBRow_firstCellWidth"
+                        android:text="PB01"
+                        android:layout_width="90dp"
+                        android:layout_height="0dp"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="Phòng Giám đốc"
+                        android:layout_width="160dp"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="40"
+                        android:layout_width="80dp"
+                        />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    // DEFAULT ------------------------------------------------ TABLE ---------
+    <LinearLayout
+        android:id="@+id/TK_wrapper_tableDefault"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        >
+
+        <!--    Header of the table -->
+        <!-- 80 p0 / 80 / 80 / 80 / <= 80 -->
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="4"
+            >
+            <TableRow>
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="@string/ten_vpp"
+                    android:layout_width="80dp"
+                    android:padding="0dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="PB01"
+                    android:layout_width="80dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="PB02"
+                    android:layout_width="80dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="PB03"
+                    android:layout_width="80dp"
+                    />
+                <TextView
+                    style="@style/tableHeader"
+                    android:text="PB04"
+                    android:maxWidth="80dp"
+                    />
+            </TableRow>
+
+        </TableLayout>
+        <!--    Content of the table -->
+        <!-- 80 p0 / 80 / 80 / 80 / <= 80 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:id="@+id/TK_tableDefault"
+                style="@style/tableLayoutStyle"
+                android:stretchColumns="4">
+                <!--         Generate Row based on Data here   -->
+                <TableRow>
+                    <TextView
+                        style="@style/PBRow_firstCellWidth"
+                        android:text="Đầu bấm"
+                        android:layout_width="80dp"
+                        android:padding="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="0"
+                        android:layout_width="80dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="40"
+                        android:layout_width="80dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="0"
+                        android:layout_width="80dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/tableRow"
+                        android:text="0"
+                        android:maxWidth="80dp"
+                        android:layout_height="0dp"
+                        android:visibility="invisible"
+                        />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        layout="@layout/_created_by_3xdteam"/>
+</LinearLayout>

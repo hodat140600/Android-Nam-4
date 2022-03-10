@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginVertical="10dp"
+    android:orientation="vertical"
+    >
+    <!--    Header of the table -->
+    <!--    -->
+    <TableLayout
+        style="@style/tableLayoutStyle"
+        android:stretchColumns="1"
+        >
+        <TableRow>
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/ma_nv"
+                android:layout_width="80dp"
+                />
+            <TextView
+                style="@style/tableHeader"
+                android:text="@string/ten_nv"
+                android:maxWidth="300dp"
+                />
+        </TableRow>
+        <!--    Content of the table -->
+    </TableLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            style="@style/tableLayoutStyle"
+            android:stretchColumns="1">
+            <!--         Generate Row based on Data here   -->
+            <TableRow>
+                <TextView
+                    style="@style/PBRow_firstCellWidth"
+                    android:text="NV1"
+                    android:layout_width="80dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    style="@style/tableRow"
+                    android:text="Nguyễn Thành Nam"
+                    android:maxWidth="300dp"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

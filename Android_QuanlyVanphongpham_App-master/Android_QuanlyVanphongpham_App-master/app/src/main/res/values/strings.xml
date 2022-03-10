@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Giuaki</string>
+    <string name="thoat">Thoát</string>
+    <string name="dau_cong">+</string>
+    <string name="xoa">Xóa</string>
+    <string name="sua">Sửa</string>
+    <string name="cap_phat_VPP">Cấp phát VPP</string>
+    <string name="phong_ban">Phòng ban</string>
+    <string name="nhan_vien">Nhân viên</string>
+    <string name="vpp">VPP</string>
+    <string name="search">Search</string>
+    <string name="ma_pb">Mã PB</string>
+    <string name="ten_pb">Tên PB</string>
+    <string name="ma_nv">Mã NV</string>
+    <string name="ten_nv">Tên NV</string>
+    <string name="ngay_sinh">Ngày sinh</string>
+    <string name="ma_vpp">Mã VPP</string>
+    <string name="ten_vpp">Tên VPP</string>
+    <string name="dvt">ĐVT</string>
+    <string name="gia_nhap">Giá nhập</string>
+    <string name="gia">Giá</string>
+    <string name="cai">Cái</string>
+    <string name="keo">Kéo</string>
+    <string name="combo_box_spinner">Combo Box - Spinner</string>
+    <string name="so_luong">Số lượng</string>
+    <string name="created_by_3xd_team">Created by 3xD Team</string>
+    <string name="thong_ke">Thống kê</string>
+    <string name="pb">PB</string>
+    <string name="sl">SL</string>
+    <string name="ngay_cap">Ngày cấp</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="error_of_this_line">Error of this line</string>
+    <string name="don_vi_tinh">Đơn vị tính</string>
+    <string name="hinh">Hình</string>
+    <string name="tri_gia">Trị giá</string>
+    <string name="bao_cao">báo cáo</string>
+    <string name="so_luong_vpp">Số lượng VPP</string>
+    <array name="phongban">
+        <item>PB01</item>
+        <item>PB02</item>
+        <item>PB03</item>
+        <item>PB04</item>
+    </array>
+</resources>

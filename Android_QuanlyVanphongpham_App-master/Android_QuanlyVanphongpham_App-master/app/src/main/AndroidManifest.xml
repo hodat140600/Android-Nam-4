@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.giuaki">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+
+        android:usesCleartextTraffic="true"
+
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Giuaki">
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <activity android:name=".Chart.ThongkeChart">
+        </activity>
+        <activity android:name=".Main.ThongbaoLayout" />
+        <activity android:name=".XinchoLayout" />
+        <activity android:name=".Tables.BaocaoTable02" />
+        <activity android:name=".Tables.BaocaoTable01" />
+        <activity android:name=".Statistics.BaocaoVPPAllLayout" />
+        <activity android:name=".Statistics.BaocaoVPPLayout" />
+        <activity android:name=".Tables.ThongkeTable04" />
+        <activity android:name=".Tables.ThongkeTable03" />
+        <activity android:name=".Tables.ThongkeTable02" />
+        <activity android:name=".Tables.ThongkeTable01" />
+        <activity android:name=".Main.ThongkeLayout" />
+        <activity android:name=".Statistics.CapphatVPP2Layout" />
+        <activity android:name=".Statistics.CapphatVPPLayout"></activity>
+        <activity android:name=".Main.VanphongphamLayout"></activity>
+        <activity android:name=".Main.NhanvienLayout"></activity>
+        <activity android:name=".Main.PhongbanLayout"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
