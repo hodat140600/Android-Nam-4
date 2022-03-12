@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
         CapPhatDatabase cpDB = new CapPhatDatabase(this);
 
         pbDB.reset();
-        nvDB.reset();
         vppDB.reset();
+        nvDB.reset();
         cpDB.reset();
     }
 

@@ -23,7 +23,7 @@ import java.util.List;
 public class NhanVienDatabase extends SQLiteOpenHelper {
 
     // Database Version
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 1;
 
     // Database Name
     public static final String DATABASE_NAME = "GiuaKi.db";
@@ -114,7 +114,7 @@ public class NhanVienDatabase extends SQLiteOpenHelper {
                     + COLUMN_HOTEN + " TEXT NOT NULL,"
                     + COLUMN_NGAYSINH + " TEXT NOT NULL,"
                     + COLUMN_MAPB + " TEXT NOT NULL,"
-                    + "FOREIGN KEY(" + COLUMN_MAPB + ") REFERENCES PHONGBAN(" + COLUMN_MAPB + ") )";
+                    + "FOREIGN KEY(" + this.COLUMN_MAPB + ") REFERENCES PHONGBAN(" + COLUMN_MAPB + ") );";
             // Execute script.
         db.execSQL(script);
     }
@@ -132,14 +132,14 @@ public class NhanVienDatabase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void dropTable() {
+    public void dropTable(){
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("DROP TABLE IF EXISTS " + NhanVienDatabase.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
 
     public List<NhanVien> reset() {
-        dropTable();
+        this.dropTable();
         insert(new NhanVien("NV1", "Nguyễn Thành Nam", "1982-08-01", "PB01"));
         insert(new NhanVien("NV2", "Vũ Thị Thắm", "1992-08-12", "PB01"));
         insert(new NhanVien("NV3", "Hồ Thanh Tâm", "1990-06-05", "PB02"));
@@ -222,7 +222,7 @@ public class NhanVienDatabase extends SQLiteOpenHelper {
                 NhanVienDatabase.TABLE_NAME
                 , values
                 , NhanVienDatabase.COLUMN_MANV + "=?"
-                , new String[]{String.valueOf(nhanvien.getMaNv())}
+                , new String[] {String.valueOf(nhanvien.getMaNv())}
         );
     }
 
