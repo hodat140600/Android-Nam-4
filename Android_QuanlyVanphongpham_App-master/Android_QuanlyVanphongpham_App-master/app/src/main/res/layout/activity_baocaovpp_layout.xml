@@ -28,7 +28,7 @@
     </LinearLayout>
     <TextView
         style="@style/Heading"
-        android:text="Báo cáo thống kê cấp phát văn phòng phẩm"
+        android:text="Báo cáo thống kê cấp phát vật tư"
         android:paddingHorizontal="50dp"
         android:paddingVertical="10dp"
         android:textSize="25dp"
@@ -47,7 +47,7 @@
         <TextView
             android:id="@+id/BC_index_tenPB"
             style="@style/textBlack"
-            android:text="Phòng Kỹ thuật"
+            android:text="Phòng kho Thủ Đức"
             android:layout_marginLeft="80dp"
             android:textStyle="bold"
             />
@@ -115,7 +115,7 @@
                     android:padding="0dp"/>
                 <TextView
                     style="@style/tableHeader"
-                    android:text="Tên VPP"
+                    android:text="Tên VT"
                     android:textSize="@dimen/smallTextSize"
                     android:layout_width="70dp"
                     android:padding="0dp"/>

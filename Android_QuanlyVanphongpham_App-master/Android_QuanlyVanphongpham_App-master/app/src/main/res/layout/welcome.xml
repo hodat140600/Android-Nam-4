@@ -12,21 +12,22 @@
         android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:lottie_rawRes="@raw/welcome"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading1"
 
 
         />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/json"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="600dp"
 
-        app:lottie_rawRes="@raw/loading"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading"
 
         />
 

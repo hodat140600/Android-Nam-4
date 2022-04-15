@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quản Lý Văn Phòng Phẩm"
+            android:text="Quản Lý Vật Tư Kho"
             android:textSize="25dp"
             android:textColor="@color/black"
             android:fontFamily="monospace"
@@ -83,7 +83,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Phòng Ban"
+                    android:text="Phòng Kho"
                     android:textSize="20sp"
                     android:fontFamily="monospace"
                     android:textStyle="bold"
@@ -95,7 +95,7 @@
                     android:layout_width="150dp"
                     android:layout_height="100dp"
                     android:maxHeight="100dp"
-                    android:src="@drawable/human_resources"
+                    android:src="@drawable/nhapkho1"
                     android:layout_alignParentRight="true"
                     />
             </RelativeLayout>
@@ -114,12 +114,12 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#94ebcd"
+                android:background="#E3483C"
                 android:padding="10dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Văn Phòng Phẩm"
+                    android:text="Vật Tư"
                     android:textSize="20sp"
                     android:fontFamily="monospace"
                     android:textStyle="bold"
@@ -127,13 +127,13 @@
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     />
+
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:maxHeight="100dp"
-                    android:src="@drawable/stationery"
                     android:layout_alignParentRight="true"
-                    />
+                    android:maxHeight="100dp"
+                    android:src="@drawable/vattu" />
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
@@ -163,13 +163,13 @@
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     />
+
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:maxHeight="100dp"
-                    android:src="@drawable/resource"
                     android:layout_alignParentRight="true"
-                    />
+                    android:maxHeight="100dp"
+                    android:src="@drawable/nhapkho" />
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>

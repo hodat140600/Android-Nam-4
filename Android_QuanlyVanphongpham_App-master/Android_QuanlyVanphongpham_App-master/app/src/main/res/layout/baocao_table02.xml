@@ -34,7 +34,7 @@
                 android:layout_width="100dp"/>
             <TextView
                 style="@style/tableHeader"
-                android:text="Tên VPP"
+                android:text="Tên VT"
                 android:textSize="@dimen/smallTextSize"
                 android:layout_width="80dp"/>
             <TextView

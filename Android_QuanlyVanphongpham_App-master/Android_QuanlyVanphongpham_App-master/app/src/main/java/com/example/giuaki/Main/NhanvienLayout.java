@@ -69,6 +69,7 @@ public class NhanvienLayout extends AppCompatActivity {
 
     DatePicker datepickerNSNV;
 
+
     String PB_spinner_mini_maPB;
     String strDate;
 

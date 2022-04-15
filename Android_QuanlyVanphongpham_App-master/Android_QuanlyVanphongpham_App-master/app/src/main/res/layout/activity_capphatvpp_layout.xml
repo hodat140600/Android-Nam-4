@@ -32,7 +32,7 @@
     // HEADING LABEL ------------------------------------------------------
     <TextView
         style="@style/Heading"
-        android:text="Cấp phát VPP"
+        android:text="Cấp phát Vật tư"
         />
 
     // PB SPINNER ------------------------------------------------------
@@ -65,7 +65,7 @@
             android:id="@+id/CP_warningLabel"
             android:layout_marginLeft="50dp"
             style="@style/textRed"
-            android:text="Khi chọn tất cả phòng ban cấu trúc bảng sẽ khác"
+            android:text="Khi chọn tất cả phòng kho cấu trúc bảng sẽ khác"
             />
 
     </LinearLayout>
@@ -415,7 +415,7 @@
         <TextView
             android:id="@+id/CP_noteTotalLabel"
             style="@style/textRed"
-            android:text="Tổng Chi phí trong Phòng Kỹ thuật được cấp :"
+            android:text="Tổng Chi phí trong Phòng kho Thủ Đức được cấp :"
             android:layout_width="match_parent"
             android:gravity="center"
             android:layout_marginHorizontal="20dp"
@@ -427,7 +427,7 @@
             android:layout_marginTop="5dp">
             <TextView
                 style="@style/textBlack"
-                android:text="Số loại VPP:"
+                android:text="Số loại Vật tư:"
                 android:textSize="14dp"
                 android:layout_width="200dp"
                 android:paddingHorizontal="30dp"/>

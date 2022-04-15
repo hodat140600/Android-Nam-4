@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:background="#2A91E1"
         android:gravity="center|center_vertical"
-        android:text="Thêm văn phòng phẩm"
+        android:text="Thêm vật tư"
         android:textAllCaps="true"
         android:textSize="24dp" />
 

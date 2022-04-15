@@ -173,7 +173,7 @@ public class CapphatVPPLayout extends AppCompatActivity {
             setEventTableRows((TableRow) cp_tablecp_list.getChildAt(i), cp_tablecp_list);
         }
 //        for (int i = 0; i < cp_tablenv_list.getChildCount(); i++) {
-//            setEventTableRows((TableRow) cp_tablenv_list.getChildAt(i), cp_tablenv_list);
+//              setEventTableRows((TableRow) cp_tablenv_list.getChildAt(i), cp_tablenv_list);
 //        }
 
     }
@@ -402,8 +402,10 @@ public class CapphatVPPLayout extends AppCompatActivity {
                 indexofRow = (int) v.getId();
                 focusRow = (TableRow) list.getChildAt(indexofRow);
                 focusSP = (TextView) focusRow.getChildAt(0);
+                String sp = focusSP.getText().toString().trim();
                 focusDate = (TextView) focusRow.getChildAt(1);
                 focusMaVPP = (TextView) focusRow.getChildAt(2);
+                String mvpp = focusMaVPP.getText().toString().trim();
                 focusMaNV = (TextView) focusRow.getChildAt(3);
                 focusSL = (TextView) focusRow.getChildAt(4);
                 setNormalBGTableRows(list);

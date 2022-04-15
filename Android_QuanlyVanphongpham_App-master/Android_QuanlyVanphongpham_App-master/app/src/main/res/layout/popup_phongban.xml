@@ -25,7 +25,7 @@
     <TextView
         style="@style/textBlack"
         android:id="@+id/PB_showLabel"
-        android:text="Thêm phòng ban"
+        android:text="Thêm phòng kho"
         android:background="#2A91E1"
         android:layout_width="match_parent"
         android:textAllCaps="true"

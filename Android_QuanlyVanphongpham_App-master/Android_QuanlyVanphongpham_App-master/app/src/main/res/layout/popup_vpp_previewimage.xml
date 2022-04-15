@@ -22,7 +22,7 @@
         android:layout_height="150dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
-        android:src="@drawable/_xdlogo"
+        android:src="@drawable/lg"
         />
     <LinearLayout
         android:layout_width="match_parent"

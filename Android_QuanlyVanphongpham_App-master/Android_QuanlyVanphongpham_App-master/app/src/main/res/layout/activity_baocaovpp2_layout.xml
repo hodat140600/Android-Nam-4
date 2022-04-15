@@ -29,7 +29,7 @@
     </LinearLayout>
     <TextView
         style="@style/Heading"
-        android:text="Báo cáo thống kê cấp phát văn phòng phẩm"
+        android:text="Báo cáo thống kê cấp phát vật tư"
         android:paddingHorizontal="50dp"
         android:paddingVertical="10dp"
         android:textSize="25dp"
